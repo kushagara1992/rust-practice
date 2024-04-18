@@ -23,4 +23,27 @@ fn main() {
         println!("I don't like apples or oranges");
     }
 
+    let mut count  = 1;
+    'outer: loop {
+        count +=1;
+        println!("Test loop count is {}", count);
+        if count == 10 {
+            break 'outer;
+        }
+    }
+
+    while count < 20 {
+        count +=1;
+        println!("{}", count)
+    }
+
+    let arr = [1, 2, 3, 4, 5];
+
+    'test_loop: for x in arr {
+        if x == 3{
+            break 'test_loop;
+        }
+        print!("{}\n", x)
+    }
+
 }
